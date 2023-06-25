@@ -4,7 +4,7 @@ var choice2 = document.getElementById("2");
 var choice3 = document.getElementById("3");
 var choice4 = document.getElementById("4");
 var index = 0;
-var correctAnswer1 = 
+
 
 // These are placeholder questions
 var questions = ["What is Sherry's name?", "How old is Sherry?", "What is Sherry's cat's name?", "What planet are we on?"];
@@ -20,6 +20,7 @@ var answers = [
     },
 
     {
+        question: "How old is Sherry?",
         choice1: "1. 2",
         choice2: "2. 12",
         choice3: "3. 150",
@@ -28,6 +29,7 @@ var answers = [
     },
 
     {
+        question: "What is Sherry's cat's name?",
         choice1: "1. Fluffy",
         choice2: "2. Bozo",
         choice3: "3. Pacino",
@@ -36,6 +38,7 @@ var answers = [
     },
 
     {
+        question: "What planet are we on?",
         choice1: "1. Earth",
         choice2: "2. Mars",
         choice3: "3. Venus",
@@ -76,7 +79,4 @@ choice4.innerText = answers[index].choice4;
 
 displayQuest()
 
-paraQuest.addEventListener("click", displayQuest() {
-    if ()
-}
-)
+paraQuest.addEventListener("click", displayQuest())
