@@ -3,12 +3,15 @@ var choice1 = document.getElementById("1");
 var choice2 = document.getElementById("2");
 var choice3 = document.getElementById("3");
 var choice4 = document.getElementById("4");
+var index = 0;
+var correctAnswer1 = 
 
 // These are placeholder questions
 var questions = ["What is Sherry's name?", "How old is Sherry?", "What is Sherry's cat's name?", "What planet are we on?"];
 
 var answers = [
     {
+        question: "What is Sherry's name?",
         choice1: "1. Donna",
         choice2: "2. Sherry",
         choice3: "3. Catherine",
@@ -41,19 +44,39 @@ var answers = [
     },
 ]
 
-for (let index = 0; index < questions.length; index++) {
-    paraQuest.innerText = questions[index];
-    choice1.innerText = answers[index].choice1;
-    choice2.innerText = answers[index].choice2;
-    choice3.innerText = answers[index].choice3;
-    choice4.innerText = answers[index].choice4;
-    
+// for (let index = 0; index < questions.length; index++) {
+   // paraQuest.innerText = questions[index];
+   // choice1.innerText = answers[index].choice1;
+   // choice2.innerText = answers[index].choice2;
+   // choice3.innerText = answers[index].choice3;
+   // choice4.innerText = answers[index].choice4;
+//}
+
+// const buttons = document.querySelectorAll('button');
+
+// buttons.forEach(button => {
+   //  button.addEventListener('click', () => {
+        // alert(button.innerText);
+  // }); 
+// })
+
+// paraQuest.innerText = answers[index].question;
+// choice1.innerText = answers[index].choice1;
+// choice2.innerText = answers[index].choice2;
+// choice3.innerText = answers[index].choice3;
+// choice4.innerText = answers[index].choice4;
+
+function displayQuest () {
+paraQuest.innerText = answers[index].question;
+choice1.innerText = answers[index].choice1;
+choice2.innerText = answers[index].choice2;
+choice3.innerText = answers[index].choice3;
+choice4.innerText = answers[index].choice4;
 }
 
-const buttons = document.querySelectorAll('button');
+displayQuest()
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        alert(button.innerText);
-    });
-})
+paraQuest.addEventListener("click", displayQuest() {
+    if ()
+}
+)
