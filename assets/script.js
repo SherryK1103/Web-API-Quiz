@@ -72,7 +72,13 @@ var answers = [
 
 
 function displayQuest () {
-    console.log('running displayQuest') 
+    for (let index = 0; index < questions.length; index++) {
+        paraQuest.innerText = questions[index];
+        choice1.innerText = answers[index].choice1;
+        choice2.innerText = answers[index].choice2;
+        choice3.innerText = answers[index].choice3;
+        choice4.innerText = answers[index].choice4;
+     }
 paraQuest.innerText = answers[index].question;
 choice1.innerText = answers[index].choice1;
 choice2.innerText = answers[index].choice2;
