@@ -3,6 +3,7 @@ var choice1 = document.getElementById("1");
 var choice2 = document.getElementById("2");
 var choice3 = document.getElementById("3");
 var choice4 = document.getElementById("4");
+var startButton = document.getElementById("startButton");
 var index = 0;
 
 
@@ -69,7 +70,9 @@ var answers = [
 // choice3.innerText = answers[index].choice3;
 // choice4.innerText = answers[index].choice4;
 
+
 function displayQuest () {
+    console.log('running displayQuest') 
 paraQuest.innerText = answers[index].question;
 choice1.innerText = answers[index].choice1;
 choice2.innerText = answers[index].choice2;
@@ -77,6 +80,6 @@ choice3.innerText = answers[index].choice3;
 choice4.innerText = answers[index].choice4;
 }
 
-displayQuest()
+// displayQuest()
 
-paraQuest.addEventListener("click", displayQuest())
+startButton.addEventListener("click", displayQuest)
