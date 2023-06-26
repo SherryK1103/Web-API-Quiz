@@ -4,25 +4,25 @@ var choice2 = document.getElementById("2");
 var choice3 = document.getElementById("3");
 var choice4 = document.getElementById("4");
 var startButton = document.getElementById("startButton");
-var index = 0;
 var totalTime = 600;
-
+var timeDisplay = document.getElementById("time");
 
 // These are placeholder questions
-var questions = ["What is Sherry's name?", "How old is Sherry?", "What is Sherry's cat's name?", "What planet are we on?"];
+var questions = ["What does HTML stand for?", "What does CSS stand for?", "What is Sherry's cat's name?", "What planet are we on?"];
+var index = 0;
 
 var answers = [
     {
-        question: "What is Sherry's name?",
-        choice1: "1. Donna",
-        choice2: "2. Sherry",
-        choice3: "3. Catherine",
-        choice4: "4. Meghan",
+        question: "What does HTML stand for?",
+        choice1: "1. Hey Tomorrow Maybe Learn",
+        choice2: "2. Hyper Text Markup Language",
+        choice3: "3. Hello Timer Monday Long",
+        choice4: "4. Hyper Toddler Madeup Language",
         correctAnswer: 2,
     },
 
     {
-        question: "How old is Sherry?",
+        question: "What does CSS stand for?",
         choice1: "1. 2",
         choice2: "2. 12",
         choice3: "3. 150",
@@ -56,6 +56,8 @@ choice1.addEventListener('click', () => {
     }
     else {
        totalTime -= 3;
+       index += 1;
+       displayQuest();
     }
  }); 
 
@@ -66,6 +68,8 @@ choice2.addEventListener('click', () => {
     }
     else {
        totalTime -= 3;
+       index += 1;
+       displayQuest();
     }
  });
 
@@ -76,6 +80,8 @@ choice2.addEventListener('click', () => {
     }
     else {
        totalTime -= 3;
+       index += 1;
+       displayQuest();
     }
  });
 
@@ -86,6 +92,8 @@ choice2.addEventListener('click', () => {
     }
     else {
        totalTime -= 3;
+       index += 1;
+       displayQuest();
     }
  });
 
@@ -98,30 +106,7 @@ setInterval(timer, 1000);
  // display the timer and make it countdown. We need to do set interval 
  // update event listeners to proceed even if answer is wrong, just proceed with even less time. 
 
-// for (let index = 0; index < questions.length; index++) {
-   // paraQuest.innerText = questions[index];
-   // choice1.innerText = answers[index].choice1;
-   // choice2.innerText = answers[index].choice2;
-   // choice3.innerText = answers[index].choice3;
-   // choice4.innerText = answers[index].choice4;
-//}
-
-// const buttons = document.querySelectorAll('button');
-
-// buttons.forEach(button => {
-   //  button.addEventListener('click', () => {
-        // alert(button.innerText);
-  // }); 
-// })
-
-// paraQuest.innerText = answers[index].question;
-// choice1.innerText = answers[index].choice1;
-// choice2.innerText = answers[index].choice2;
-// choice3.innerText = answers[index].choice3;
-// choice4.innerText = answers[index].choice4;
-
-
-function displayQuest () {
+function displayQuest() {
 paraQuest.innerText = answers[index].question;
 choice1.innerText = answers[index].choice1;
 choice2.innerText = answers[index].choice2;
@@ -129,29 +114,14 @@ choice3.innerText = answers[index].choice3;
 choice4.innerText = answers[index].choice4;
 }
 
-// displayQuest()
+function startTimer() {
+    var timerInterval = setInterval(function() {
+        totalTime--;
+        timeDisplay.textContent = "Time remaining: " + totalTime;
+    })
+}
 
-startButton.addEventListener("click", displayQuest)
-
-/* choice1.addEventListener('click', () => {
-    if (answers[index].answer != 1) {
-        totalTime -= 3;
-     }
- 
-     index += 1;
-       displayQuest();
-  }); 
-
-setInterval(myTimer, 1000);
-
-
-setInterval(timer, 1000);
-
-
-
-if (answers[index].answer == 2) {
-         alert("correct")
-     }
-    else {
-       alert("incorrect")
-     } */
+startButton.addEventListener("click", function() {
+    displayQuest();
+    startTimer();
+})
