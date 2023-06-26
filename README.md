@@ -15,7 +15,7 @@ https://sherryk1103.github.io/Web-API-Quiz-4/
 
 ## Usage
 
-![WEB-API-SCREENSHOT](https://github.com/SherryK1103/WEB-API-SCREENSHOT/blob/main/Assets/css-port-image.png?raw=true)
+![WEB-API-SCREENSHOT](https://github.com/SherryK1103/assets/IMG/WEB-API-SCREENSHOT.png)
 
 ## Process Steps
 
