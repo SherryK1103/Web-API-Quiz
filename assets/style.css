@@ -9,3 +9,29 @@ body {
   #question {
     text-align: center;
   }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  button {
+    margin: 5px 0;
+    background-color: pink;
+    color: black;
+  }
+
+  header.h3.highscores {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  header.h3.time {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
