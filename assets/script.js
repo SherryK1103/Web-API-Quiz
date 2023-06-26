@@ -58,9 +58,13 @@ choice1.addEventListener('click', () => {
     } else {
         totalTime -= 3;
     }
-    index += 1;
     updateScoreDisplay();
-    displayQuest();
+    index += 1;
+    if (index === answers.length) {
+        endQuiz();
+    } else {
+        displayQuest();
+    }
 });
 
 choice2.addEventListener('click', () => {
@@ -69,9 +73,13 @@ choice2.addEventListener('click', () => {
     } else {
         totalTime -= 3;
     }
-    index += 1;
     updateScoreDisplay();
-    displayQuest();
+    index += 1;
+    if (index === answers.length) {
+        endQuiz();
+    } else {
+        displayQuest();
+    }
 });
 
 choice3.addEventListener('click', () => {
@@ -80,9 +88,13 @@ choice3.addEventListener('click', () => {
     } else {
         totalTime -= 3;
     }
-    index += 1;
     updateScoreDisplay();
-    displayQuest();
+    index += 1;
+    if (index === answers.length) {
+        endQuiz();
+    } else {
+        displayQuest();
+    }
 });
 
 choice4.addEventListener('click', () => {
@@ -91,10 +103,15 @@ choice4.addEventListener('click', () => {
     } else {
         totalTime -= 3;
     }
-    index += 1;
     updateScoreDisplay();
-    displayQuest();
+    index += 1;
+    if (index === answers.length) {
+        endQuiz();
+    } else {
+        displayQuest();
+    }
 });
+
 
 function timer() {
     totalTime -= 1;
@@ -109,16 +126,16 @@ var timerInterval; // variable to store the interval ID
 setInterval(timer, 1000);
 
 function displayQuest() {
-    paraQuest.innerText = answers[index].question;
-    choice1.innerText = answers[index].choice1;
-    choice2.innerText = answers[index].choice2;
-    choice3.innerText = answers[index].choice3;
-    choice4.innerText = answers[index].choice4;
-    if (index >= answers.length) {
-        endQuiz();
-        return;
+        if (index === answers.length) {
+            endQuiz();
+            return;
+        }
+        paraQuest.innerText = answers[index].question;
+        choice1.innerText = answers[index].choice1;
+        choice2.innerText = answers[index].choice2;
+        choice3.innerText = answers[index].choice3;
+        choice4.innerText = answers[index].choice4;
     }
-}
 
 function endQuiz() {
     // Stop the timer
