@@ -11,11 +11,11 @@ Git clone <paste SSH key>
 
 ## Deployed Link
 
-https://sherryk1103.github.io/Advanced-CSS-Portfolio/
+https://sherryk1103.github.io/Web-API-Quiz-4/
 
 ## Usage
 
-![advanced css portfolio screenshot](https://github.com/SherryK1103/Advanced-CSS-Portfolio/blob/main/Assets/Images/css-port-image.png?raw=true)
+![WEB-API-SCREENSHOT](https://github.com/SherryK1103/WEB-API-SCREENSHOT/blob/main/Assets/css-port-image.png?raw=true)
 
 ## Process Steps
 
