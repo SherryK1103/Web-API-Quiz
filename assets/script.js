@@ -4,8 +4,9 @@ var choice2 = document.getElementById("2");
 var choice3 = document.getElementById("3");
 var choice4 = document.getElementById("4");
 var startButton = document.getElementById("startButton");
-var totalTime = 600;
+var totalTime = 60;
 var timeDisplay = document.getElementById("time");
+var score = 0; // Variable to store the user's score
 
 // These are placeholder questions
 var questions = ["What does HTML stand for?", "What does CSS stand for?", "What is Sherry's cat's name?", "What planet are we on?"];
@@ -51,56 +52,53 @@ var answers = [
 
 choice1.addEventListener('click', () => {
     if (answers[index].correctAnswer == 1) {
-        index += 1;
-        displayQuest();
-    }
-    else {
+        score +=1; // increment the score if the answer is correct
+    } else {
        totalTime -= 3;
+    }
        index += 1;
        displayQuest();
-    }
  }); 
 
 choice2.addEventListener('click', () => {
-    if (answers[index].correctAnswer == 2) {
-        index += 1;
-        displayQuest();
-    }
-    else {
+    if (answers[index].correctAnswer == 1) {
+        score +=1; // increment the score if the answer is correct
+    } else {
        totalTime -= 3;
+    }
        index += 1;
        displayQuest();
-    }
  });
 
  choice3.addEventListener('click', () => {
-    if (answers[index].correctAnswer == 3) {
-        index += 1;
-        displayQuest();
-    }
-    else {
+    if (answers[index].correctAnswer == 1) {
+        score +=1; // increment the score if the answer is correct
+    } else {
        totalTime -= 3;
+    }
        index += 1;
        displayQuest();
-    }
  });
 
  choice4.addEventListener('click', () => {
-    if (answers[index].correctAnswer == 4) {
-        index += 1;
-        displayQuest();
-    }
-    else {
+    if (answers[index].correctAnswer == 1) {
+        score +=1; // increment the score if the answer is correct
+    } else {
        totalTime -= 3;
+    }
        index += 1;
        displayQuest();
-    }
  });
 
 function timer() {
     totalTime -= 1;
     timeDisplay.textContent = "Time Remaining: " + totalTime;
+    if (totalTime <= 0) {
+        endQuiz();
+    }
 }
+
+var timerInterval; // variable to store the interval ID
 
 setInterval(timer, 1000);
 
@@ -113,11 +111,33 @@ choice1.innerText = answers[index].choice1;
 choice2.innerText = answers[index].choice2;
 choice3.innerText = answers[index].choice3;
 choice4.innerText = answers[index].choice4;
+if (index >= answers.length) {
+    endQuiz();
+    return;
+}
+}
+
+function endQuiz() {
+    // Stop the timer
+    clearInterval(timerInterval);
+
+    // Disable answer choices ot perform any other actions
+    choice1.disabled = true;
+    choice2.disabled = true;
+    choice3.disabled = true;
+    choice4.disabled = true;
+
+    // Display a message to indicate end of quiz
+    paraQuest.textContent = "Quiz ended!";
+    timeDisplay.textContent = "Time's up!";
 }
 
 function startTimer() {
         totalTime--;
         timeDisplay.textContent = "Time Remaining: " + totalTime;
+        if (totalTime <= 0) {
+            endQuiz();
+        }
 }
 
 startButton.addEventListener("click", function() {
