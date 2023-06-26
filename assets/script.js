@@ -11,7 +11,7 @@ var scorerDisplay = document.getElementById("high-scores");
 var scoreDisplay = document.getElementById("score");
 
 // These are placeholder questions
-var questions = ["What does HTML stand for?", "What does CSS stand for?", "What is Sherry's cat's name?", "What planet are we on?"];
+var questions = ["What does HTML stand for?", "What does CSS stand for?", "What does DOM stand for?", "What planet are we on?"];
 var index = 0;
 
 var answers = [
@@ -34,20 +34,20 @@ var answers = [
     },
 
     {
-        question: "What is Sherry's cat's name?",
-        choice1: "1. Fluffy",
-        choice2: "2. Bozo",
-        choice3: "3. Pacino",
-        choice4: "4. Cat",
+        question: "What DOM stand for?",
+        choice1: "1. Dior Otto Moon",
+        choice2: "2. Doom Object Modal",
+        choice3: "3. Document Object Model",
+        choice4: "4. Dad Ostrich Morbid",
         correctAnswer: 3,
     },
 
     {
-        question: "What planet are we on?",
-        choice1: "1. Earth",
-        choice2: "2. Mars",
-        choice3: "3. Venus",
-        choice4: "4. Pluto",
+        question: "What does API stand for as in Web API's?",
+        choice1: "1. Application Programming Interface",
+        choice2: "2. Application Pulse Innertext",
+        choice3: "3. Apples Peanuts Interesting",
+        choice4: "4. Application Pour Inside",
         correctAnswer: 1,
     },
 ]
