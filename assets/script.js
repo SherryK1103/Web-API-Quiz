@@ -99,6 +99,7 @@ choice2.addEventListener('click', () => {
 
 function timer() {
     totalTime -= 1;
+    timeDisplay.textContent = "Time Remaining: " + totalTime;
 }
 
 setInterval(timer, 1000);
@@ -116,10 +117,10 @@ choice4.innerText = answers[index].choice4;
 
 function startTimer() {
         totalTime--;
-        timeDisplay.textContent = "Time remaining: " + totalTime;
+        timeDisplay.textContent = "Time Remaining: " + totalTime;
 }
 
 startButton.addEventListener("click", function() {
     displayQuest();
     startTimer();
-})
+});
