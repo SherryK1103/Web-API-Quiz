@@ -115,10 +115,8 @@ choice4.innerText = answers[index].choice4;
 }
 
 function startTimer() {
-    var timerInterval = setInterval(function() {
         totalTime--;
         timeDisplay.textContent = "Time remaining: " + totalTime;
-    })
 }
 
 startButton.addEventListener("click", function() {
