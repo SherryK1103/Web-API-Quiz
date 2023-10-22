@@ -15,7 +15,7 @@ https://sherryk1103.github.io/Web-API-Quiz-4/
 
 ## Usage
 
-![WEB-API-SCREENSHOT](./assets/IMG/WEB-API-SCREENSHOT.png)
+![WEB-API-SCREENSHOT2](./assets/IMG/WEB-API-SCREENSHOT2.png)
 
 ## Process Steps
 
